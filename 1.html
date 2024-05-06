@@ -9,50 +9,48 @@
     
 </body>
 </html>
-<script>
-    
-    class ListNode {
-    constructor(val, next = null) {
-        this.val = val;
-        this.next = next;
+
+<Script>
+    function init(value){
+        this.value = value;
+        this.next=null
     }
+
+    const f1=new init (1)
+    const f2=new init (3)
+    const f3=new init (5)
+
+    f1.next=f2;
+    f2.next=f3;
+  
+  function data(value){
+    this.value=value;
+    this.next=null
+  }
+
+  let n1=new data(2)
+  let n2=new data(4)
+  let n3=new data(6)
+
+
+  n1.next=n2;
+  n2.next=n3;
+
+ 
+  let first=f1
+
+
+  let sec=n1
+
+while(sec!=null){
+
+  console.log(first.value)
+  
+console.log(sec.value)
+first=first.next
+sec=sec.next
 }
 
-function mergeTwoLists(l1, l2) {
-    let dummy = new ListNode(0);
-    let current = dummy;
-    
-    while (l1 && l2) {
-        if (l1.val < l2.val) {
-            current.next = l1;
-            l1 = l1.next;
-        } else {
-            current.next = l2;
-            l2 = l2.next;
-        }
-        current = current.next;
-    }
-    
-    current.next = l1 || l2;
-    
-    return dummy.next;
-}
 
 
-let list1 = new ListNode(1);
-list1.next = new ListNode(3);
-list1.next.next = new ListNode(5);
-
-let list2 = new ListNode(2);
-list2.next = new ListNode(4);
-list2.next.next = new ListNode(6);
-
-let mergedList = mergeTwoLists(list1, list2);
-
-
-while (mergedList) {
-    console.log(mergedList.val);
-    mergedList = mergedList.next;
-}
-
-</script>
+</Script>
