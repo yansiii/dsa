@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    function Node(value){
+        this.value = value,
+        this.next = null
+    }
+    const s1 = new  Node(1)
+    const s2 = new  Node(2)
+    const s3 = new  Node(3)
+    const s4 = new  Node(4)
+    const s5 = new  Node(5)
+
+    s1.next = s2
+    s2.next = s3
+    s3.next = s5
+   
+    
+    n = 2
+    
+    let curr = s1
+    while(curr != null){
+        console.log(curr.value)
+        curr = curr.next
+    }
+    
+</script>
