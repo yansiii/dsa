@@ -9,28 +9,31 @@
     
 </body>
 </html>
-<script>
-    function Node(value){
-        this.value = value,
-        this.next = null
-    }
-    const s1 = new  Node(1)
-    const s2 = new  Node(2)
-    const s3 = new  Node(3)
-    const s4 = new  Node(4)
-    const s5 = new  Node(5)
 
-    s1.next = s2
-    s2.next = s3
-    s3.next = s5
-   
-    
-    n = 2
-    
-    let curr = s1
-    while(curr != null){
-        console.log(curr.value)
-        curr = curr.next
+<script>
+    function data(value){
+
+        this.value=value
+        this.next=value
     }
+
+    const f1=new data(1)
+    const f2=new data(2)
+    const f3=new data(3)
+    const f4=new data(4)
+    const f5=new data(5)
+
+    f1.next=f2
+    f2.next=f3
+    f3.next=f5
     
+
+
+    let curr=f1
+
+    while(curr.next!=null){
+        console.log(curr.value)
+        curr=curr.next
+    }
+
 </script>
